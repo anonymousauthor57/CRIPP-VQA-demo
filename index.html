@@ -154,7 +154,7 @@
 
             <div class="row" id="example_0">
               <div class="row">
-                <div class="col s12 m6">
+                <div class="col s12 m4">
                   <div class="icon-block">
                     <h4>Input video</h4>
                     <video
@@ -169,35 +169,44 @@
                     ></video>
                   </div>
                 </div>
-                <div class="col s12 m6">
+                <div class="col s12 m8">
                   <div class="icon-block">
                     <h4>Question</h4>
                     <button class="card-panel waves-effect waves-light btn" onclick="showDescriptive(0)">Descriptive QA</button>
                     <div class="row" id="descriptive0" style="display: none">
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
+                      <p>Q: What is the material of minimum occurring objects in the video ?</p>
+                      <p>A: Cardboard</p>
+                      <p>Q: Do purple cardboard sphere objects exist in the video ?</p>
+                      <p>A: No</p>
+                      <p>Q: How many collisions are there between purple aluminium sphere and teal aluminium cube ?</p>
+                      <p>A: 0</p>
                     </div>
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showCounterfactual(0)">Counterfactual QA</button>
                     <div class="row" id="counterfactual0" style="display: none">
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 4</p>
+                      <p>Q: What will happen, if the purple aluminium cube is removed ?</p>
+                      <p>C1: teal cardboard sphere would collide with olive cardboard sphere</p>
+                      <p>A1: true</p>
+                      <p>C2: teal cardboard sphere would collide with purple cardboard cube</p>
+                      <p>A2: false</p>
+                      <p>Q: What will happen, if the teal aluminium cube is replaced with olive cardboard cube?</p>
+                      <p>C1: olive cardboard sphere would collide with purple aluminium cube</p>
+                      <p>A1: false</p>
+                      <p>C2: olive cardboard sphere would collide with purple cardboard cube</p>
+                      <p>A2: true</p>
+                      <p>Q: What will happen, if I add olive cardboard cube at the back of purple aluminium cube?</p>
+                      <p>C1: olive cardboard sphere would collide with purple aluminium cube</p>
+                      <p>A1: false</p>
+                      <p>C1: teal aluminium cube would collide with olive cardboard cube</p>
+                      <p>A2: true</p>
                     </div>
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showPlanning(0)">Planning QA</button>
                     <div class="row" id="planning0" style="display: none">
-                      <p>Q: Make the collision.</p>
-                      <p>A: ok</p>
-                      <p>Q: Stop the collision.</p>
-                      <p>A: ok</p>
+                      <p>Q: Make the collition between teal cardboard sphere and olive cardboard sphere.</p>
+                      <p>A: Remove => purple cardboard cube</p>
+                      <p>Q: Stop the collision between olive cardboard sphere and purple aluminium cube.</p>
+                      <p>A: Repalce => teal aluminium cube by olive cardboard cube</p>
                     </div>
                   </div>
                 </div>
