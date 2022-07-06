@@ -2,8 +2,8 @@
 
 <html lang="en">
   <head>
-    <title>Portfolio Page</title>
-    <meta property="og:title" content="Portfolio Page" />
+    <title>CRIPP-VQA</title>
+    <meta property="og:title" content="CRIPP-VQA" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -143,13 +143,15 @@
           <div class="container">
 
             <div class="row">
-              <!-- <div class="s12 m4"> -->
+              <div class="col s12 m4">
                 <button class="card-panel waves-effect waves-light red lighten-1 btn" onclick="showExample(0)">Example 0</button>
-              <!-- </div>
-              <div class="s12 m4"> -->
+              </div>
+              <div class="col s12 m4">
                 <button class="card-panel waves-effect waves-light red lighten-1 btn" onclick="showExample(1)">Example 1</button>
-              <!-- </div> -->
-
+              </div>
+              <div class="col s12 m4">
+                <button class="card-panel waves-effect waves-light red lighten-1 btn" onclick="showExample(1)">Example 2</button>
+              </div>
             </div>
 
             <div class="row" id="example_0">
@@ -174,27 +176,27 @@
                     <h4>Question</h4>
                     <button class="card-panel waves-effect waves-light btn" onclick="showDescriptive(0)">Descriptive QA</button>
                     <div class="row" id="descriptive0" style="display: none">
-                      <p>Q: What is the material of minimum occurring objects in the video ?</p>
-                      <p>A: Cardboard</p>
-                      <p>Q: Do purple cardboard sphere objects exist in the video ?</p>
-                      <p>A: No</p>
-                      <p>Q: How many collisions are there between purple aluminium sphere and teal aluminium cube ?</p>
+                      <p><b>Q: What is the material of minimum occurring objects in the video ?</b></p>
+                      <p>A: Cardboard</p><br>
+                      <p><b>Q: Do purple cardboard sphere objects exist in the video ?</b></p>
+                      <p>A: No</p><br>
+                      <p><b>Q: How many collisions are there between purple aluminium sphere and teal aluminium cube ?</b></p>
                       <p>A: 0</p>
                     </div>
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showCounterfactual(0)">Counterfactual QA</button>
                     <div class="row" id="counterfactual0" style="display: none">
-                      <p>Q: What will happen, if the purple aluminium cube is removed ?</p>
+                      <p><b>Q: What will happen, if the purple aluminium cube is removed ?</b></p>
                       <p>C1: teal cardboard sphere would collide with olive cardboard sphere</p>
                       <p>A1: true</p>
                       <p>C2: teal cardboard sphere would collide with purple cardboard cube</p>
-                      <p>A2: false</p>
-                      <p>Q: What will happen, if the teal aluminium cube is replaced with olive cardboard cube?</p>
+                      <p>A2: false</p><br>
+                      <p><b>Q: What will happen, if the teal aluminium cube is replaced with olive cardboard cube?</b></p>
                       <p>C1: olive cardboard sphere would collide with purple aluminium cube</p>
                       <p>A1: false</p>
                       <p>C2: olive cardboard sphere would collide with purple cardboard cube</p>
-                      <p>A2: true</p>
-                      <p>Q: What will happen, if I add olive cardboard cube at the back of purple aluminium cube?</p>
+                      <p>A2: true</p><br>
+                      <p><b>Q: What will happen, if I add olive cardboard cube at the back of purple aluminium cube?</b></p>
                       <p>C1: olive cardboard sphere would collide with purple aluminium cube</p>
                       <p>A1: false</p>
                       <p>C1: teal aluminium cube would collide with olive cardboard cube</p>
@@ -203,9 +205,9 @@
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showPlanning(0)">Planning QA</button>
                     <div class="row" id="planning0" style="display: none">
-                      <p>Q: Make the collition between teal cardboard sphere and olive cardboard sphere.</p>
-                      <p>A: Remove => purple cardboard cube</p>
-                      <p>Q: Stop the collision between olive cardboard sphere and purple aluminium cube.</p>
+                      <p><b>Q: Make the collition between teal cardboard sphere and olive cardboard sphere.</b></p>
+                      <p>A: Remove => purple cardboard cube</p><br>
+                      <p><b>Q: Stop the collision between olive cardboard sphere and purple aluminium cube.</b></p>
                       <p>A: Repalce => teal aluminium cube by olive cardboard cube</p>
                     </div>
                   </div>
@@ -216,9 +218,9 @@
                 <div class="row" id="counterfactualVideo0" style="display: none;">
                   <h5>Counterfactual reference videos for readers:</h5>
                   <div class="col s12 m4">
-                    <h6 class="center">Remove</h6>
+                    <h6 class="center"><b>Remove</b></h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_0_0_remove.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -229,9 +231,9 @@
                     ></video>
                   </div>
                   <div class="col s12 m4">
-                    <h6 class="center">Replace</h6>
+                    <h6 class="center"><b>Replace</b></h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_0_1_replace.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -242,9 +244,9 @@
                     ></video>
                   </div>
                   <div class="col s12 m4">
-                    <h6 class="center">Add</h6>
+                    <h6 class="center"><b>Add</b></h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_0_1_add.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -380,7 +382,7 @@
                     ></path>
                   </svg>
                   <span class="home-text5 card-Text">
-                    Will be soon available.
+                    Annotations are available at: <a href="https://drive.google.com/file/d/1lwNJHgrk2K2W-1HmK0IDv8yOePZ67UWS/view?usp=sharing">Drive Link</a>
                   </span>
                 </div>
                 <div class="home-container5">
@@ -392,7 +394,31 @@
                     </svg>
                   </div>
                   <span class="home-text6 card-Text">
-                    Apologies for the inconvience.
+                    Questions & Answers are available at: <a href="https://drive.google.com/file/d/1lwNJHgrk2K2W-1HmK0IDv8yOePZ67UWS/view?usp=sharing">Drive Link</a>
+                  </span>
+                </div>
+                <div class="home-container5">
+                  <div class="home-container6">
+                    <svg viewBox="0 0 1024 1024" class="home-icon06">
+                      <path
+                        d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text6 card-Text">
+                     To re-create the high-quality videos from the annotations follow instructions at: <a href="https://anonymous.4open.science/r/CRIPP-VQA/">Code Link</a>
+                  </span>
+                </div>
+                <div class="home-container5">
+                  <div class="home-container6">
+                    <svg viewBox="0 0 1024 1024" class="home-icon06">
+                      <path
+                        d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text6 card-Text">
+                    Train/Val/Test distribution: [0-4000) / [4000, 4500) / [4500, 5000]
                   </span>
                 </div>
               </div>
