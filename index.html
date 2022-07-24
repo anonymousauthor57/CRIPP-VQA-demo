@@ -177,7 +177,7 @@
                     <button class="card-panel waves-effect waves-light btn" onclick="showDescriptive(0)">Descriptive QA</button>
                     <div class="row" id="descriptive0" style="display: none">
                       <p><b>Q: What is the material of minimum occurring objects in the video ?</b></p>
-                      <p>A: Cardboard</p><br>
+                      <p>A: Aluminium</p><br>
                       <p><b>Q: Do purple cardboard sphere objects exist in the video ?</b></p>
                       <p>A: No</p><br>
                       <p><b>Q: How many collisions are there between purple aluminium sphere and teal aluminium cube ?</b></p>
@@ -215,7 +215,7 @@
               </div>
               <div class="row">
                 <button class="card-panel waves-effect waves-light btn" onclick="showCounterVideo(0)">Show counterfactual videos</button>
-                <div class="row" id="counterfactualVideo0" style="display: none;">
+                <div class="row" id="counterfactualVideo0">
                   <h5>Counterfactual reference videos for readers:</h5>
                   <div class="col s12 m4">
                     <h6 class="center"><b>Remove</b></h6>
@@ -262,11 +262,11 @@
 
             <div class="row" id="example_1" style="display: none;">
               <div class="row">
-                <div class="col s12 m6">
+                <div class="col s12 m4">
                   <div class="icon-block">
                     <h4>Input video</h4>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_1_new.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -277,47 +277,56 @@
                     ></video>
                   </div>
                 </div>
-                <div class="col s12 m6">
+                <div class="col s12 m8">
                   <div class="icon-block">
                     <h4>Question</h4>
                     <button class="card-panel waves-effect waves-light btn" onclick="showDescriptive(1)">Descriptive QA</button>
                     <div class="row" id="descriptive1" style="display: none">
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
+                      <p><b>Q: What is the material of maximum occurring objects in the video ?</b></p>
+                      <p>A: Cardboard</p><br>
+                      <p><b>Q: Do purple cardboard sphere objects exist in the video ?</b></p>
+                      <p>A: Yes</p><br>
+                      <p><b>Q: How many collisions are there between purple cardboard cube and olive aluminium cube ?</b></p>
+                      <p>A: 1</p>
                     </div>
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showCounterfactual(1)">Counterfactual QA</button>
                     <div class="row" id="counterfactual1" style="display: none">
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
-                      <p>Q: How many objects are there?</p>
-                      <p>A: 5</p>
+                      <p><b>Q: What will happen, if the olive aluminium cube is removed ?</b></p>
+                      <p>C1: purple cardboard cube would collide with olive cardboard cube</p>
+                      <p>A1: true</p>
+                      <p>C2: purple cardboard cube would collide with teal cardboard cube</p>
+                      <p>A2: false</p><br>
+                      <p><b>Q: What will happen, if the olive aluminium cube is replaced with pruple aluminium cube?</b></p>
+                      <p>C1: olive cardboard cube would collide with purple cardboard cube</p>
+                      <p>A1: false</p>
+                      <p>C2: purple cardboard cube would collide with purple aluminium cube</p>
+                      <p>A2: true</p><br>
+                      <p><b>Q: What will happen, if I add teal aluminium sphere at the right of purple cardboard sphere?</b></p>
+                      <p>C1: purple cardboard cube would collide with olive cardboard cube</p>
+                      <p>A1: false</p>
+                      <p>C1: purple cardboard cube would collide with purple cardboard sphere</p>
+                      <p>A2: true</p>
                     </div>
                     <br>
                     <button class="card-panel waves-effect waves-light btn" onclick="showPlanning(1)">Planning QA</button>
                     <div class="row" id="planning1" style="display: none">
-                      <p>Q: Make the collision.</p>
-                      <p>A: no</p>
-                      <p>Q: Stop the collision.</p>
-                      <p>A: no</p>
+                      <p><b>Q: Stop the collision between olive cardboard cube and purple cardboard cube.</b></p>
+                      <p>A: Replace => olive aluminium cube by pruple aluminium cube</p><br>
+                      <p><b>Q: Stop the collision between olive cardboard cube and purple cardboard cube.</b></p>
+                      <p>A: Add => teal aluminium sphere to the right of purple cardboard sphere</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <button class="card-panel waves-effect waves-light btn" onclick="showCounterVideo(1)">Show counterfactual videos</button>
-                <div class="row" id="counterfactualVideo1" style="display: none;">
+                <div class="row" id="counterfactualVideo1">
                   <h5>Counterfactual reference videos for readers:</h5>
                   <div class="col s12 m4">
                     <h6 class="center">Remove</h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_1_0_remove.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -330,7 +339,7 @@
                   <div class="col s12 m4">
                     <h6 class="center">Replace</h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_1_0_replace.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
@@ -343,7 +352,7 @@
                   <div class="col s12 m4">
                     <h6 class="center">Add</h6>
                     <video
-                      src="./public/playground_assets/example_0_new.mp4"
+                      src="./public/playground_assets/example_1_0_add.mp4"
                       poster="https://play.teleporthq.io/static/svg/videoposter.svg"
                       controls
                       loop
